@@ -10,7 +10,7 @@
       <div class="product-info">
         <h1>{{ product }}</h1>
         <p>{{ description }}</p>
-        <button :href="link">More products like this</button>
+        <a :href="link">More products like this</a>
 
       </div>
     </div>
@@ -28,7 +28,8 @@
         description: 'A pair of warm fuzzy socks',
         //image: 'https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg',
         image: " https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg",
-        altText: "A pair of socks"
+        altText: 'A pair of socks',
+        link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks.'
       };
     },
   };
