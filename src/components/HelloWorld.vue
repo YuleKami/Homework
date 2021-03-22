@@ -1,12 +1,20 @@
 <template>
-  <div class="product">
-    <div class="product-image"></div>
-    <div class="product-info">
-      <h1>{{ product }}</h1>
-      <p>{{ description }}</p>
+  <div class="nav-bar"></div>
+
+  <div class="product-display">
+    <div class="product-container">
+      <div class="product-image">
+        <img :src="image">
+
+      </div>
+      <div class="product-info">
+        <h1>{{ product }}</h1>
+        <p>{{ description }}</p>
+        <button :href="link">More products like this</button>
+
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -18,7 +26,9 @@
       return {
         product: 'Socks',
         description: 'A pair of warm fuzzy socks',
-        image: 'https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg',
+        //image: 'https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg',
+        image: " https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg",
+        altText: "A pair of socks"
       };
     },
   };
@@ -27,30 +37,5 @@
 
 
 <style scoped>
-  body {
-    font-family: tahoma;
-    color: #282828;
-    margin: 0px;
-  }
-
-  .product {
-    display: flex;
-  }
-
-  img {
-    border: 1px solid #d8d8d8;
-    width: 70%;
-    margin: 40px;
-    box-shadow: 0px .5px 1px #d8d8d8;
-  }
-
-  .product-image {
-    flex-basis: 700px;
-  }
-
-  .product-info {
-    margin-top: 10px;
-    flex-basis: 500px;
-  }
 
 </style>
