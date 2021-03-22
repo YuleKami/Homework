@@ -1,5 +1,4 @@
 <template>
-
   <div class="product">
     <div class="product-image"></div>
     <div class="product-info">
