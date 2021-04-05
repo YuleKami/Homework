@@ -11,7 +11,7 @@
             <div class="product-image">
                 <img :src="image">
                 <p v-if="inStock">In Stock</p>
-                <p v-else>Out of Stock</p>
+                <p v-else :class="{ textLineThrough: !inStock }">Out of Stock</p>
             </div>
 
 
@@ -45,7 +45,9 @@
                 <div style="padding: 1em">
                     <!--                <span v-if="inSale">Купить по скидке: {{ sale }}</span>-->
                     <!--                <span v-else>Купить</span>-->
-                    <button @click="addToCart">Добавить в корзину</button>
+                    <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">
+                        Add to cart
+                    </button>
                     <button @click="removeFromCart">Убрать из корзину</button>
                 </div>
 
@@ -80,7 +82,7 @@
                 ],
                 altText: 'A pair of socks',
                 link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks.',
-                inStock: true,
+                inStock: false,
                 inSale: true,
                 sale: '50%',
                 cart: 0,

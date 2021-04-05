@@ -189,6 +189,9 @@ ul {
   list-style-type: none;
 }
 
+.textLineThrough {
+  text-decoration: line-through;
+}
 
 @media only screen and (max-width: 600px) {
   .container {
